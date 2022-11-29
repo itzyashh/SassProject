@@ -5,8 +5,16 @@
   "repository": "https://github.com/itzyashh/SassProject.git",
   "author": "itzyashh <yashjadhav1411@rocketmail.com>",
   "license": "MIT",
+  "scripts": {
+    "compileSass": "node-sass sass/main.sass css/style.css",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
   "dependencies": {
     "node-sass": "^8.0.0",
-    "parcel": "^2.8.0"
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.8.0"
   }
 }

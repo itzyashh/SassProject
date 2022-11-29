@@ -1,34 +1,42 @@
 
+@import "abstracts/variables"
+@import "abstracts/functions"
+@import "abstracts/mixins"
+
+@import "base/base"
+@import "base/animations"
+@import "base/utilities"
+@import "base/typography"
+
+@import "pages/_home"
+
 $lightGreen: #7ed56f
 $mediumGreen: #55c57a
 $darkGreen: #28b485
+$grey: #777
+$white: #fff
 
 *,
 *::after,
 *::before
     margin: 0%
     padding: 0%
+    box-sizing: inherit
 
-html{
-
+html
     font-size: 62.5%
 
 body
     font-family: "Lato", sans-serif
     font-weight: 400
     line-height: 1.7
-    color: #777
+    color: $grey
     padding: 3rem
     box-sizing: border-box
 
 .header
     height: 95vh
-    background-image: linear-gradient(
-      to right bottom,
-      rgba($darkGreen,0.8),
-      rgba(126, 213, 111, 0)
-    ),
-    url(https://images.pexels.com/photos/626155/pexels-photo-626155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-image: linear-gradient(to right bottom,rgba($darkGreen,0.8),rgba(126, 213, 111, 0)),url(https://images.pexels.com/photos/626155/pexels-photo-626155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
     background-size: cover
     background-position: bottom
     clip-path: polygon(0 0, 100% 0%, 100% 88%, 0 100%)
@@ -43,7 +51,7 @@ body
         height: 3.5rem
 
 .headingPrimary
-    color: #fff
+    color: $white
     text-transform: uppercase
 
     &--Main
@@ -104,14 +112,14 @@ body
     font-size: 1.6rem
 
 .btn:hover
-    transform: translateY(-3px)
+    transform: translateY(-2px)
 
 .btn:active
     transform: translateY(-1px)
 
 .btnWhite
-    background-color: #fff
-    color: #777
+    background-color: $white
+    color: $grey
 
     &:hover
         box-shadow: 0 1rem 2rem rgba(0,0,0,0.2)

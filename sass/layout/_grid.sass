@@ -1,0 +1,29 @@
+.row
+    max-width: $gridWidth
+    background-color: #eee
+    margin: 0 auto
+
+    &:not(:last-child)
+        margin-bottom: $gutterVertical
+
+    @include clearfix
+
+    [class^="col"]
+        background-color: orangered
+        float: left
+        &:not(:last-child)
+            margin-right: $gutterHorizontal
+
+    .col1Of2
+        width: calc((100% - #{$gutterHorizontal}) / 2)
+
+    .col1Of3
+        width: calc((100% - 2 * #{$gutterHorizontal}) / 3)
+    .col1Of4
+        width: calc((100% - 3 * #{$gutterHorizontal}) / 4)
+    .col2Of3
+        width: calc(2 * ((100% - 2 * #{$gutterHorizontal}) / 3) + #{$gutterHorizontal})
+    .col2Of4
+        width: calc(2 * ((100% - 3 * #{$gutterHorizontal}) / 4) + #{$gutterHorizontal})
+    .col3Of4
+        width: calc(3 * ((100% - 3 * #{$gutterHorizontal}) / 4) + 2 * #{$gutterHorizontal})

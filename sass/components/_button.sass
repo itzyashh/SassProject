@@ -6,7 +6,7 @@
     display: inline-block
     border-radius: 10rem
     transition: all 0.3
-    font-size: 1.6rem
+    font-size: $defaultFontSize
 
 .btn:hover
     transform: translateY(-2px)
@@ -23,3 +23,24 @@
 
     &:active
         box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2)
+
+.btnText
+    &:link,
+    &:visited
+        color: $darkGreen
+        display: inline-block
+        text-decoration: none
+        border-bottom: 1px solid $darkGreen
+        padding: 3px
+        font-size: $defaultFontSize
+        transition: all 0.2s
+
+    &:hover
+        background-color: $darkGreen
+        color: $white
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.15)
+        transform: translateY(-2px)
+    &:active
+
+        box-shadow: 0 1rem 1rem rgba(0,0,0,0.15)
+        transform: translateY(0)
